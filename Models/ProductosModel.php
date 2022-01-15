@@ -52,8 +52,9 @@ class Productos_model {
 
     public function verStock($idprod){
          $cantstock = $this->db->query("select stock from productos where id = '$idprod'");
-
+        
          $fila = $cantstock->fetch_assoc();
+         var_dump($fila);
          return $fila["stock"];
     }
 
